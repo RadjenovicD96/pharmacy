@@ -1,11 +1,11 @@
-import React from "react";
 import { Container } from "./Sidebar.styled";
+import MenuItem from "../MenuItem/MenuItem";
 
 const Sidebar = () => {
   return (
     <Container>
-      <div>Menu item 1</div>
-      <div>Menu item 2</div>
+      <MenuItem>Products</MenuItem>
+      <MenuItem>About</MenuItem>
     </Container>
   );
 };
