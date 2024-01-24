@@ -1,4 +1,3 @@
-import products from "../../assets/products";
 import {
   Card,
   Body,
@@ -9,8 +8,15 @@ import {
   ButtonImage,
 } from "./Products.styled";
 import Header from "./Header/Header";
+import { useProductsContext } from "../../context/productsContext";
 
 const Products = () => {
+  const { products, deleteProduct } = useProductsContext();
+
+  const handleOnDeleteClick = (id: string) => {
+    deleteProduct(id);
+  };
+
   return (
     <>
       <Header />
@@ -34,6 +40,9 @@ const Products = () => {
                       <ButtonImage
                         alt="Delete"
                         src="https://imgs.search.brave.com/c-DiC5n6qSmYJVXKTKtUJZo9QMdKiZa5MssWNZOAAMU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtMDAuaWNvbmR1/Y2suY29tL2Fzc2V0/cy4wMC90cmFzaC1p/Y29uLTQ2Mng1MTIt/bmp2ZXk1bmYucG5n"
+                        onClick={() => {
+                          handleOnDeleteClick(product.id);
+                        }}
                       />
                     </ButtonsContainer>
                   </MainRow>
