@@ -10,4 +10,8 @@ export const Container = styled.div`
   text-align: center;
   justify-content: center;
   cursor: pointer;
+
+  :hover {
+    opacity: 0.5;
+  }
 `;

@@ -1,14 +1,15 @@
 import Sidebar from "../components/Sidebar/Sidebar";
 import { Container, MainContent } from "./Layout.styled";
-import Home from "../pages/Home";
 
-const Layout = () => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const Layout: React.FC<Props> = ({ children }) => {
   return (
     <Container>
       <Sidebar />
-      <MainContent>
-        <Home />
-      </MainContent>
+      <MainContent>{children}</MainContent>
     </Container>
   );
 };

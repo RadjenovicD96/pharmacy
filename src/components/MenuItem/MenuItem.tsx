@@ -2,8 +2,8 @@ import React from "react";
 import { Container } from "./MenuItem.styled";
 
 interface Props {
-  onClick?: () => void;
-  children?: React.ReactNode;
+  onClick: () => void;
+  children: React.ReactNode;
 }
 
 const MenuItem: React.FC<Props> = ({ children, onClick }) => {

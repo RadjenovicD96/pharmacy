@@ -10,4 +10,12 @@ export const Container = styled.div`
   min-width: 240px;
   gap: 16px;
   height: calc(100vh - 64px);
+
+  :hover {
+    background-color: #323956;
+  }
+
+  :active {
+    background-color: #4d5577;
+  }
 `;
