@@ -9,12 +9,18 @@ import {
 } from "./Products.styled";
 import Header from "./Header/Header";
 import { useProductsContext } from "../../context/productsContext";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+  const navigate = useNavigate();
   const { products, deleteProduct } = useProductsContext();
 
   const handleOnDeleteClick = (id: string) => {
     deleteProduct(id);
+  };
+
+  const handleOnEditClick = (id: string) => {
+    navigate(`/products/${id}/edit`);
   };
 
   return (
@@ -36,6 +42,7 @@ const Products = () => {
                       <ButtonImage
                         alt="Edit"
                         src="https://imgs.search.brave.com/SH88OgM22nxvGq9hllXJ2FADWc19jBun7fyc4w8H1wk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzEy/OC80Mjc3LzQyNzcx/MzIucG5n"
+                        onClick={() => handleOnEditClick(product.id)}
                       />
                       <ButtonImage
                         alt="Delete"

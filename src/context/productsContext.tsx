@@ -38,7 +38,7 @@ export const ProductsProvider: React.FC<Props> = ({ children }) => {
         return [...acc, product];
       }
 
-      return acc;
+      return [...acc, curr];
     }, []);
 
     setProducts(updatedProducts);
