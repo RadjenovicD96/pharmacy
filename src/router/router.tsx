@@ -3,6 +3,8 @@ import DefaultRoute from "./DefaultRoute";
 import Products from "../pages/Products/Products";
 import About from "../pages/About/About";
 import Layout from "../Layout/Layout";
+import EditProduct from "../pages/EditProduct/EditProduct";
+import CreateProduct from "../pages/CreateProduct/CreateProduct";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,22 @@ const router = createBrowserRouter([
         element: (
           <Layout>
             <Products />
+          </Layout>
+        ),
+      },
+      {
+        path: "/products/:id/edit",
+        element: (
+          <Layout>
+            <EditProduct />
+          </Layout>
+        ),
+      },
+      {
+        path: "/products/create",
+        element: (
+          <Layout>
+            <CreateProduct />
           </Layout>
         ),
       },

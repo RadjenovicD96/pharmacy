@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: Rubik, sans-serif;
     overscroll-behavior: none;
     background-color: #677be1;
+    height: 100%;
   }
 
   *:focus {
