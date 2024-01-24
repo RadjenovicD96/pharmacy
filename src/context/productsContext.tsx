@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import type { Product } from "../types";
 import initialProducts from "../assets/products";
+import { addNotification } from "../services/notifications";
 
 export interface ProductsContextState {
   products: Product[];
@@ -26,10 +27,20 @@ export const ProductsProvider: React.FC<Props> = ({ children }) => {
   const deleteProduct = (id: string) => {
     const updatedProducts = products.filter((product) => product.id !== id);
     setProducts(updatedProducts);
+    addNotification({
+      type: "success",
+      title: "Success!",
+      message: "Product is successfully deleted!",
+    });
   };
 
   const createProduct = (product: Product) => {
     setProducts([product, ...products]);
+    addNotification({
+      type: "success",
+      title: "Success!",
+      message: "Product is successfully created!",
+    });
   };
 
   const editProduct = (product: Product) => {
@@ -42,6 +53,11 @@ export const ProductsProvider: React.FC<Props> = ({ children }) => {
     }, []);
 
     setProducts(updatedProducts);
+    addNotification({
+      type: "success",
+      title: "Success!",
+      message: "Product is successfully updated!",
+    });
   };
 
   return (
