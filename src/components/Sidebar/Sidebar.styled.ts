@@ -9,7 +9,7 @@ export const Container = styled.div`
   border-radius: 8px;
   min-width: 240px;
   gap: 16px;
-  height: calc(100vh - 64px);
+  height: calc(100% - 64px);
 
   :hover {
     background-color: #323956;
