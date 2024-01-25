@@ -13,10 +13,15 @@ const Sidebar = () => {
     navigate("/about");
   };
 
+  const handleOnStatsClick = () => {
+    navigate("/stats");
+  };
+
   return (
     <Container>
       <MenuItem onClick={handleOnProductsClick}>Products</MenuItem>
       <MenuItem onClick={handleOnAboutClick}>About</MenuItem>
+      <MenuItem onClick={handleOnStatsClick}>Statistics</MenuItem>
     </Container>
   );
 };

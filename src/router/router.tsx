@@ -5,6 +5,7 @@ import About from "../pages/About/About";
 import Layout from "../Layout/Layout";
 import EditProduct from "../pages/EditProduct/EditProduct";
 import CreateProduct from "../pages/CreateProduct/CreateProduct";
+import Stats from "../pages/Stats/Stats";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,14 @@ const router = createBrowserRouter([
         element: (
           <Layout>
             <Products />
+          </Layout>
+        ),
+      },
+      {
+        path: "/stats",
+        element: (
+          <Layout>
+            <Stats />
           </Layout>
         ),
       },

@@ -64,7 +64,7 @@ const products: Product[] = [
   {
     id: "7",
     name: "Product 7",
-    price: 220,
+    price: 10,
     date: new Date(),
     manufacturer: {
       id: "13",
@@ -74,7 +74,7 @@ const products: Product[] = [
   {
     id: "8",
     name: "Product 8",
-    price: 200,
+    price: 20,
     date: new Date(),
     manufacturer: {
       id: "12",
